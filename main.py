@@ -112,8 +112,8 @@ class PrepareFirmware():
                         time.sleep(1)
                 elif self.model == 'c100x':
                     version = input('Insert version (1.5.1, default 1.5.1 [ENTER]): ')
-                    if version in ('010501', '1.5.1', ''):
-                        self.url = PrepareFirmware.url_c100x_010501
+                    if version in ('020012', '2.0.12', ''):
+                        self.url = PrepareFirmware.url_c100x_020012
                         step = 2
                     else:
                         print('Wrong version ❌', flush=True)
