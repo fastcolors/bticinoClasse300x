@@ -36,6 +36,10 @@ class PrepareFirmware():
                  'liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&'
                  'fileName=C100X_010501.fwz&fileId='
                  '58107.23188.46381.34528')
+    url_c100x_020012 = ('https://www.homesystems-legrandgroup.com/MatrixENG/'
+                 'liferay/bt_mxLiferayCheckout.jsp?fileFormat=generic&'
+                 'fileName=C100XR_020012.fwz&fileId'
+                 '=58107.23188.36439.38772')
     password = 'C300X'
     password2 = 'C100X'
     password3 = 'SMARTDES'
