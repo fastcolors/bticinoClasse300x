@@ -138,7 +138,7 @@ class PrepareFirmware():
                     step = 3
                 elif ask in ('n', 'N', 'available'):
                     self.use_web_firmware = 'n'
-                    self.filename = f'{self.model}_{version}.fwz'
+                    self.filename = f'C100XR_020012.fwz'
                     print('We use the firmware called: '
                         f'{self.filename}', flush=True)
                     step = 3
