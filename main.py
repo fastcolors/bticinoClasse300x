@@ -191,13 +191,13 @@ class PrepareFirmware():
                 # Ask for MQTT installation
                 ask = input(
                     'Do you want to install MQTT [y/Y] or no [n/N]? default no [ENTER]: ')
-                if ask in ('y', 'Y'):
+                if ask in ('y', 'Y', ''):
                     self.install_mqtt = 'y'
                     print('The program will install MQTT.', flush=True)
                     step = 6
-                elif ask in ('n', 'N', ''):
+                elif ask in ('n', 'N'):
                     self.install_mqtt = 'n'
-                    print('The program will NOT install MQTT.', flush=True)
+                    print('The program WILL install MQTT.', flush=True)
                     step = 6
                 else:
                     print('Wrong answer ❌', flush=True)
@@ -392,10 +392,10 @@ class PrepareFirmware():
             return
         if password:
             print(f'Trying to unzip with password: {password} '
-                  '... (please wait arround 95 seconds) ', end='', flush=True)
+                  '... (please wait around 95 seconds) ', end='', flush=True)
             try:
                 with zipfile.ZipFile(zip_file) as zf:
-                    zf.extractall
+                    zf.extractall()
             except RuntimeError:
                 print('Wrong password ❌')
                 sys.exit(1)
