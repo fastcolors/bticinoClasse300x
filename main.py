@@ -41,7 +41,7 @@ class PrepareFirmware():
                  'fileName=C100XR_020012.fwz&fileId'
                  '=58107.23188.36439.38772')
     password = 'C300X'
-    password2 = ''
+    password2 = 'C100X'
     password3 = 'SMARTDES'
 
     def __init__(self):
@@ -395,7 +395,7 @@ class PrepareFirmware():
                   '... (please wait arround 95 seconds) ', end='', flush=True)
             try:
                 with zipfile.ZipFile(zip_file) as zf:
-                    zf.extractall()
+                    zf.extractall
             except RuntimeError:
                 print('Wrong password ❌')
                 sys.exit(1)
